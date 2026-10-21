@@ -1,0 +1,276 @@
+/* Estilos para el blog de cerveza artesanal */
+:root {
+    --primary-color: #d97706; /* Ámbar / Cerveza */
+    --secondary-color: #1f2937; /* Oscuro / Malta */
+    --bg-color: #f9fafb;
+    --text-color: #374151;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header y Menú de Navegación */
+header {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Secciones Generales */
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Sección 1: Hero / Inicio */
+#inicio {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 8rem 2rem;
+    max-width: 100%;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: #b45309;
+}
+
+/* Sección 2: Sobre Nosotros */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Sección 3: Estilos de Cerveza */
+.styles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body h3 {
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+/* Sección 4: Proceso de Elaboración */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.step {
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Sección 5: Contacto */
+#contacto {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    max-width: 100%;
+    padding: 5rem 2rem;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #4b5563;
+    border-radius: 4px;
+    background-color: #374151;
+    color: var(--white);
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
